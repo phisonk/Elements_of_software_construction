@@ -14,9 +14,7 @@ class Index(View):
 	def post(self, request):
 		return HttpResponse('I am called from a post Request')
 class Profile(View): 
-	"""
-	User Profile page reachable from /user/<username> URL
-	"""
+	"""User Profile page reachable from /user/<username> URL"""
 	def get(self, request, username):
 		params = dict()
 		user = User.objects.get(username=username) 
